@@ -165,6 +165,12 @@ body {
   left: 19px;
 	transition: 0.2s;
 }
+.piano-key.sharp{
+  transition: all .2s;
+}
+.piano-key.sharp:hover{
+  background-color: #515961;
+}
 .piano-letter-sharp{
   top: -45px;
   left: 8px;
@@ -175,11 +181,9 @@ body {
 .piano-letter-sharp:hover{
 	color: #d7dfe6;
 }
-
 .piano-key:hover .piano-letter{
   color: #d7dfe6;
 }
-
 .sharp:active {
 	border-top: 0;
 }
@@ -203,10 +207,14 @@ body {
 	color: #a2abb3;
 }
 
-.piano-key-active-pseudo:hover::after,
-.piano-key-active-pseudo:hover::before,
+.piano-key-active-mouse:hover::after,
+.piano-key-active-mouse:hover::before,
 .piano-key-active::after,
-.piano-key-active::before {
+.piano-key-active::before,
+.piano-key.piano-key-active .piano-letter,
+.piano-key.sharp.piano-key-active .piano-letter,
+.piano-key.piano-key-active-mouse .piano-letter,
+.piano-key.piano-key-active-mouse .piano-letter{
 	color: #00b4a4;
 }
 
