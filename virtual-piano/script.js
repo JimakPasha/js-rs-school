@@ -5,6 +5,7 @@ const pianoKeys = document.querySelectorAll('.piano-key');
 const piano = document.querySelector('.piano');
 const btnLetters = document.querySelector('.btn-letters');
 const btnNotes = document.querySelector('.btn-notes');
+const pianoLetter = document.querySelectorAll('.piano-letter')
 
 // фулскрин ====================
 btnFullscreen.addEventListener('click', () => {
@@ -19,11 +20,17 @@ btnFullscreen.addEventListener('click', () => {
 btnLetters.addEventListener('click', function () {
   btnLetters.classList.add('btn-active');
   btnNotes.classList.remove('btn-active');
+  pianoLetter.forEach(function (item) {
+    item.style.display = 'block';
+  })
 })
 
 btnNotes.addEventListener('click', function () {
   btnNotes.classList.add('btn-active');
   btnLetters.classList.remove('btn-active');
+  pianoLetter.forEach(function (item) {
+    item.style.display = 'none';
+  })
 })
 // ==============================
 
