@@ -16,13 +16,16 @@
 				Online Zoo
 			</h1>
 			<div class="header__inner">
-				<a class="header__logo logo" href="index.html">
+				<a class="header__logo logo" href="/">
 					<img class="logo__img" src="images/logo.svg" alt="logo">
 				</a>
 				<nav class="header__menu menu">
+					<button class="menu__btn">
+						<span></span>
+					</button>
 					<ul class="menu__list">
 						<li class="menu__item">
-							<span class="menu__link--active">
+							<span class="menu__link menu__link--active">
 								About
 							</span>
 						</li>
@@ -123,39 +126,39 @@
 						<img class="arrow" src="images/icons/arrow-next.svg" alt="arrow">
 					</button>
 					<a class="pets__item" href="zoos/panda.html">
-						<span class="pets__item-text">Panda, China</span>
-						<img class="pets__img" src="images/panda-china.jpg" alt="panda">
+						<span class="pets__item-text">Panda, <span class="pets__item-country">China</span></span>
+						<img class="pets__img" src="images/panda-china.jpg" alt="panda" style="object-position: 25%;">
 					</a>
 					<a class="pets__item" href="zoos/alligator.html">
-						<span class="pets__item-text">Alligator, USA</span>
+						<span class="pets__item-text">Alligator, <span class="pets__item-country">USA</span></span>
 						<img class="pets__img" src="images/alligator-usa.jpg" alt="alligator">
 					</a>
 					<a class="pets__item" href="zoos/gorilla.html">
-						<span class="pets__item-text">Gorilla, Eastern DRC</span>
+						<span class="pets__item-text">Gorilla, <span class="pets__item-country">Eastern DRC</span></span>
 						<img class="pets__img" src="images/gorilla-easten-drc.jpg" alt="gorilla">
 					</a>
 					<a class="pets__item" href="error-404.html">
-						<span class="pets__item-text">Elephant, South Africa</span>
+						<span class="pets__item-text">Elephant, <span class="pets__item-country">South Africa</span></span>
 						<img class="pets__img" src="images/elephant-south-africa.jpg" alt="elephant">
 					</a>
 					<a class="pets__item" href="error-404.html">
-						<span class="pets__item-text">Polar bear, Canada</span>
+						<span class="pets__item-text">Polar bear, <span class="pets__item-country">Canada</span></span>
 						<img class="pets__img" src="images/polar-bear-canada.jpg" alt="polar-bear">
 					</a>
 					<a class="pets__item" href="zoos/eagle.html">
-						<span class="pets__item-text">Bald eagle, USA</span>
+						<span class="pets__item-text">Bald eagle, <span class="pets__item-country">USA</span></span>
 						<img class="pets__img" src="images/bald-eagle-usa.jpg" alt="bald-eagle">
 					</a>
 					<a class="pets__item" href="error-404.html">
-						<span class="pets__item-text">Arctic snowy owl, Alaska</span>
+						<span class="pets__item-text">Arctic snowy owl, <span class="pets__item-country">Alaska</span></span>
 						<img class="pets__img" src="images/artic-snowy-owl-alaska.jpg" alt="artic-snowy-owl">
 					</a>
 					<a class="pets__item" href="error-404.html">
-						<span class="pets__item-text">Penguin, USA</span>
+						<span class="pets__item-text">Penguin, <span class="pets__item-country">USA</span></span>
 						<img class="pets__img" src="images/penguin-usa.jpg" alt="penguin">
 					</a>
 				</div>
-				<a class="pets__link" href="#">
+				<a class="pets__link" href="map.html">
 					Choose your favorite
 				</a>
 			</div>
@@ -173,6 +176,7 @@
 							You can pay for a donation to any animal using your Credit/Debit card
 						</p>
 						<img class="pay__decor-arrow-1" src="images/icons/pay-arrow-1.svg" alt="arrow">
+						<img class="pay__decor-arrow-mobile-1" src="images/icons/pay-arrow-mobile.svg" alt="arrow">
 					</div>
 					<div class="pay__item">
 						<img class="pay__icon" src="images/icons/donations.svg" alt="donations">
@@ -180,6 +184,8 @@
 							Donations will go to the account of the zoo or nature reserve
 						</p>
 						<img class="pay__decor-arrow-2" src="images/icons/pay-arrow-2.svg" alt="arrow">
+						<img class="pay__decor-arrow-3" src="images/icons/pay-arrow-3.svg" alt="arrow">
+						<img class="pay__decor-arrow-mobile-2" src="images/icons/pay-arrow-mobile.svg" alt="arrow">
 					</div>
 					<div class="pay__item">
 						<img class="pay__icon" src="images/icons/animal.svg" alt="animal">
@@ -292,14 +298,14 @@
 		<div class="container">
 			<div class="footer__bg"></div>
 			<div class="footer__inner">
-				<a class="footer__logo logo" href="index.html">
+				<a class="footer__logo logo" href="/">
 					<img class="logo__img" src="images/logo.svg" alt="logo">
 				</a>
 				<button class="footer__btn">Donate for volunteers</button>
 				<nav class="footer__menu">
 					<ul class="footer__menu-list">
 						<li class="footer__menu-item">
-							<a class="footer__menu-link" href="/">
+							<a class="footer__menu-link" href="#">
 								About
 							</a>
 						</li>
@@ -386,7 +392,7 @@
 				</p>
 			</div>
 		</div>
-	</footer>
+	</footer> 
 
 	<script src="js/main.min.js"></script>
 </body>
