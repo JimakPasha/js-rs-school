@@ -4,6 +4,8 @@ const image = document.querySelector('img'),
 			fileInput = document.querySelector('[type="file"]'),
 			output = document.querySelector('output'),
 			filtersBox = document.querySelector('.filters'),
+			inputAll = document.querySelectorAll('input'),
+			outputAll = document.querySelectorAll('output'),
 
 			blurInput = document.querySelector('[name="blur"]'),
 			invertInput = document.querySelector('[name="invert"]'),
@@ -21,6 +23,7 @@ const image = document.querySelector('img'),
 
 			imgContainer = document.querySelector('.editor'),
 			btnNext = document.querySelector('.btn-next'),
+			btnReset = document.querySelector('.btn-reset'),
 			btnFullscreen = document.querySelector('.fullscreen');
 
 
@@ -66,6 +69,16 @@ saturateInput.addEventListener('input', function () {
 hueInput.addEventListener('input', function () {
 	const valueFilters = 'hue-rotate' + '(' + hueInput.value + 'deg' + ') ';
 	image.style.filter = valueFilters;
+});
+
+// кнопка reset
+btnReset.addEventListener('click', function () {
+	image.style.filter = 'none';
+	resetRange(inputAll);
+});
+
+btnReset.addEventListener('click', function () {
+	resetRange(outputAll);
 });
 
 // загрузка картинки
@@ -116,5 +129,15 @@ btnFullscreen.addEventListener('click', () => {
 });
 
 
+// функция сброса инпутов и оутпутов
 
+function resetRange(element) {
+	element.forEach(function (item, index) {
+		if (index == 3) {
+			item.value = 100;
+		} else {
+			item.value = 0;
+		}
+	});
+}
 
