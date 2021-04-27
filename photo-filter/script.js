@@ -89,7 +89,7 @@ fileInput.addEventListener('change', function () {
 	read.onload = function() {
 		const imgNew = new Image();
 		imgNew.src = read.result;
-		imgContainer.append(img);
+		imgContainer.append(imgNew);
 	}
 	read.readAsDataURL(file);
 });
