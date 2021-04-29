@@ -110,11 +110,13 @@ btnNext.addEventListener('click', () => {
 		count = '01';
 	}
 
-	if (now.getHours() == 6 || 7 || 8 || 9 || 10 || 11) {
+	const nowHourse = now.getHours();
+
+	if (nowHourse == 6 || nowHourse == 7 || nowHourse == 8 || nowHourse == 9 || nowHourse == 10 || nowHourse == 11) {
 		image.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/morning/${count}.jpg`;
-	} else if (now.getHours() == 12 || 13 || 14 || 15 || 16 || 17) {
+	} else if (nowHourse == 12 || nowHourse == 13 || nowHourse == 14 || nowHourse == 15 || nowHourse == 16 || nowHourse == 17) {
 		image.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/day/${count}.jpg`;
-	} else if (now.getHours() == 18 || 19 || 20 || 21 || 22 || 23) {
+	} else if (nowHourse == 18 || nowHourse == 19 || nowHourse == 20 || nowHourse == 21 || nowHourse == 22 || nowHourse == 23) {
 		image.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/evening/${count}.jpg`;
 	} else {
 		image.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/night/${count}.jpg`;
