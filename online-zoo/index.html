@@ -76,19 +76,19 @@
 				How it works
 			</h3>
 			<ul class="about__images-list">
-				<li class="about__images-item">
+				<li class="about__images-item" data-pos="-2">
 					<img class="about__img" src="images/eagle.jpg" alt="eagle">
 				</li>
-				<li class="about__images-item">
+				<li class="about__images-item" data-pos="-1">
 					<img class="about__img" src="images/tiger.jpg" alt="tiger">
 				</li>
-				<li class="about__images-item">
+				<li class="about__images-item" data-pos="0">
 					<img class="about__img" src="images/panda.jpg" alt="panda">
 				</li>
-				<li class="about__images-item">
+				<li class="about__images-item" data-pos="1">
 					<img class="about__img" src="images/monkey.jpg" alt="monkey">
 				</li>
-				<li class="about__images-item">
+				<li class="about__images-item" data-pos="2">
 					<img class="about__img" src="images/elephant.jpg" alt="elephant">
 				</li>
 			</ul>
@@ -301,7 +301,7 @@
 				<a class="footer__logo logo" href="/">
 					<img class="logo__img" src="images/logo.svg" alt="logo">
 				</a>
-				<button class="footer__btn">Donate for volunteers</button>
+				<button class="footer__btn" id="btn-donate">Donate for volunteers</button>
 				<nav class="footer__menu">
 					<ul class="footer__menu-list">
 						<li class="footer__menu-item">
@@ -340,11 +340,12 @@
 								<path
 									d="M20.3549 27.9589C15.8504 27.9589 12.1897 24.3227 12.1897 19.8517C12.1897 15.3806 15.853 11.7471 20.3549 11.7471C24.8567 11.7471 28.5201 15.3832 28.5201 19.8517C28.5201 24.3227 24.8594 27.9589 20.3549 27.9589ZM20.3549 13.7706C16.9772 13.7706 14.2258 16.499 14.2258 19.8543C14.2258 23.2069 16.9746 25.9353 20.3549 25.9353C23.7326 25.9353 26.4814 23.2069 26.4814 19.8543C26.4814 16.499 23.7326 13.7706 20.3549 13.7706Z"
 									fill="white" />
-									<linearGradient id="paint0_linear" x1="10.625" y1="44.1214" x2="43.5532" y2="9.75429" gradientUnits="userSpaceOnUse">
-										<stop stop-color="#EEA054" />
-										<stop offset="0.502762" stop-color="#D64763" />
-										<stop offset="1" stop-color="#B62A99" />
-									</linearGradient>
+								<linearGradient id="paint0_linear" x1="10.625" y1="44.1214" x2="43.5532" y2="9.75429"
+									gradientUnits="userSpaceOnUse">
+									<stop stop-color="#EEA054" />
+									<stop offset="0.502762" stop-color="#D64763" />
+									<stop offset="1" stop-color="#B62A99" />
+								</linearGradient>
 							</svg>
 						</a>
 					</li>
@@ -392,7 +393,54 @@
 				</p>
 			</div>
 		</div>
-	</footer> 
+	</footer>
+
+	<div class="cover hidden" id="cover"></div>
+	<div class="modal modal-animal hidden" id="form-animal">
+		<button class="modal__close-btn" id="close-btn-animal"></button>
+		<form class="modal__form" action="#">
+			<select class="modal-animal__select-animal" name="animals">
+				<option value="">Alligator</option>
+				<option value="">Eagle</option>
+				<option value="">Gorilla</option>
+				<option value="">Panda</option>
+			</select>
+			<input class="modal-animal__amount"  type="number" oninput="maxLengthCheck(this)" placeholder="Amount" step="0.1"
+				maxlength="4" minlength="0.5" max="9999" min="0.5" required>
+			<select class="modal-animal__select-money" name="money">
+				<option value="">USD</option>
+				<option value="">EUR</option>
+			</select>
+			<textarea class="modal-animal__textarea" placeholder="Your text here" oninput="maxLengthCheck(this)"
+				maxlength="280"></textarea>
+			<button class="modal-animal__form-btn" id="modal-animal__btn" type="submit">Next</button>
+		</form>
+	</div>
+
+	<div class="modal modal-donat hidden" id="form-donat">
+		<button class="modal__close-btn" id="close-btn-donat"></button>
+		<form class="modal__form modal-donat__form" action="#">
+			<div class="modal-donat__front">
+				<input class="modal-donat__input-card" type="number" placeholder="Сard Number" max="9999999999999999" min="0" oninput="maxLengthCheck(this)"
+				maxlength="16">
+				<input class="modal-donat__input-card-month" type="number" placeholder="MM" max="12" min="1" oninput="maxLengthCheck(this)"
+				maxlength="2" minlength="2">
+				<input class="modal-donat__input-card-year" type="number" placeholder="YY" max="99" min="1" oninput="maxLengthCheck(this)"
+				maxlength="2" minlength="2">
+				<input class="modal-donat__input-card-user" type="text" placeholder="Сardholder Name">
+			</div>
+			<div class="modal-donat__back">
+				<span class="modal-donat__back-line modal-donat__back-line--bold"></span>
+				<span class="modal-donat__back-line modal-donat__back-line--thin"></span>
+				<span class="modal-donat__back-line modal-donat__back-line--thin"></span>
+				<span class="modal-donat__back-line modal-donat__back-line--thin"></span>
+				<span class="modal-donat__back-line modal-donat__back-line--thin"></span>
+				<input class="modal-donat__input-card-cvc" type="number" placeholder="CVC" max="999" min="0" oninput="maxLengthCheck(this)"
+				maxlength="3" minlength="3">
+			</div>
+			<button class="modal-donat__btn" id="modal-donat__btn">Donate</button>
+		</form>
+	</div>
 
 	<script src="js/main.min.js"></script>
 </body>

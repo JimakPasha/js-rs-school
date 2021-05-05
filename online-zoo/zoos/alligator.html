@@ -323,6 +323,53 @@
 		</div>
 	</footer>
 
+	<div class="cover hidden" id="cover"></div>
+	<div class="modal modal-animal hidden" id="form-animal">
+		<button class="modal__close-btn" id="close-btn-animal"></button>
+		<form class="modal__form" action="#">
+			<select class="modal-animal__select-animal" name="animals">
+				<option value="">Alligator</option>
+				<option value="">Eagle</option>
+				<option value="">Gorilla</option>
+				<option value="">Panda</option>
+			</select>
+			<input class="modal-animal__amount" type="number" oninput="maxLengthCheck(this)" placeholder="Amount" step="0.1"
+				maxlength="4" minlength="0.5" max="9999" min="0.5" required>
+			<select class="modal-animal__select-money" name="money">
+				<option value="">USD</option>
+				<option value="">EUR</option>
+			</select>
+			<textarea class="modal-animal__textarea" placeholder="Your text here" oninput="maxLengthCheck(this)"
+				maxlength="280"></textarea>
+			<button class="modal-animal__form-btn" id="modal-animal__btn" type="submit">Next</button>
+		</form>
+	</div>
+	
+	<div class="modal modal-donat hidden" id="form-donat">
+		<button class="modal__close-btn" id="close-btn-donat"></button>
+		<form class="modal__form modal-donat__form" action="#">
+			<div class="modal-donat__front">
+				<input class="modal-donat__input-card" type="number" placeholder="Сard Number" max="9999999999999999" min="0"
+					oninput="maxLengthCheck(this)" maxlength="16">
+				<input class="modal-donat__input-card-month" type="number" placeholder="MM" max="12" min="1"
+					oninput="maxLengthCheck(this)" maxlength="2" minlength="2">
+				<input class="modal-donat__input-card-year" type="number" placeholder="YY" max="99" min="1"
+					oninput="maxLengthCheck(this)" maxlength="2" minlength="2">
+				<input class="modal-donat__input-card-user" type="text" placeholder="Сardholder Name">
+			</div>
+			<div class="modal-donat__back">
+				<span class="modal-donat__back-line modal-donat__back-line--bold"></span>
+				<span class="modal-donat__back-line modal-donat__back-line--thin"></span>
+				<span class="modal-donat__back-line modal-donat__back-line--thin"></span>
+				<span class="modal-donat__back-line modal-donat__back-line--thin"></span>
+				<span class="modal-donat__back-line modal-donat__back-line--thin"></span>
+				<input class="modal-donat__input-card-cvc" type="number" placeholder="CVC" max="999" min="0"
+					oninput="maxLengthCheck(this)" maxlength="3" minlength="3">
+			</div>
+			<button class="modal-donat__btn" id="modal-donat__btn">Donate</button>
+		</form>
+	</div>
+
 	<script src="../js/main.min.js"></script>
 </body>
 
