@@ -1,2 +1,4 @@
 # jimakpasha-JSFE2021Q1
-Private repository for @jimakpasha
+Repository for @jimakpasha
+
+In the branches you can find tasks RS-School(JS)
